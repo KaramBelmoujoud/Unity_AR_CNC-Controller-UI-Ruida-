@@ -1,0 +1,98 @@
+[
+  {
+    'data.data': '02:61:d4:89:0d:f7',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:61:d4:89:0d:f7',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:95:d4:89:89:af',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:a5:d4:89:89:bf',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:73:d4:89:89:8d',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:7d:d4:89:89:97',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:61:d4:89:0d:f7',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:73:d4:89:8d:89',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:0f:d4:89:89:29',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:1f:d4:89:89:39',
+    'data.len': '6'
+  },
+  {
+    'data.data': '01:f3:d4:0d:89:89',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:61:d4:89:0d:f7',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:61:d4:89:0d:f7',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:95:d4:89:89:af',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:a5:d4:89:89:bf',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:73:d4:89:89:8d',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:7d:d4:89:89:97',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:8f:d4:89:89:a9',
+    'data.len': '6'
+  },
+  {
+    'data.data': '03:b0:42:8b:89:89:0b:dd:e9',
+    'data.len': '9'
+  },
+  {
+    'data.data': '01:eb:d0:09:89:89',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:6d:d0:8b:89:89',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:0b:d0:29:89:89',
+    'data.len': '6'
+  },
+  {
+    'data.data': '02:8d:d0:ab:89:89',
+    'data.len': '6'
+  },
+  {
+    'data.data': '03:fd:52:89:8b:77:77:77:39:f9',
+    'data.len': '10'
+  }
+]
