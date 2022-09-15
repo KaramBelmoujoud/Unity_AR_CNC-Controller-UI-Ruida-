@@ -196,20 +196,27 @@ public class DataTransfer : MonoBehaviour
 {'data.data': '02:6d:d4:89:8b:85', 'data.len': '6'},
 {'data.data': '01:7b:d2:a9', 'data.len': '4'},
 {'data.data': '01:8b:d2:b9', 'data.len': '4'}]"
-    ,Con_Right = @"[
+    , Con_Right = @"[
 {'data.data': '03:b0:42:8b:89:89:0b:dd:e9', 'data.len': '9'},
 {'data.data': '02:6d:d4:89:8b:85', 'data.len': '6'},
 {'data.data': '00:fb:d2:29', 'data.len': '4'},
 {'data.data': '01:0b:d2:39', 'data.len': '4'}]"
-    ,Con_Up = @"[
+    , Con_Up = @"[
 {'data.data': '03:b0:42:8b:89:89:0b:dd:e9', 'data.len': '9'},
 {'data.data': '02:6d:d4:89:8b:85', 'data.len': '6'},
 {'data.data': '01:7d:d2:ab', 'data.len': '4'},
-{'data.data': '01:8d:d2:bb', 'data.len': '4'}]"
-    ,Con_Down = @"[
+{'data.data': '01:8d:d2:bb', 'data.len': '4'},
+]"
+    , Con_Down = @"[
 {'data.data': '03:b0:42:8b:89:89:0b:dd:e9', 'data.len': '9'},
 {'data.data': '02:6d:d4:89:8b:85', 'data.len': '6'},
 {'data.data': '00:fd:d2:2b', 'data.len': '4'},
-{'data.data': '01:0d:d2:3b', 'data.len': '4'}]"; 
+{'data.data': '01:0d:d2:3b', 'data.len': '4'},
+{'data.data': '01:0d:d2:3b', 'data.len': '4'}]"
+    , Emergency_Stop = @"[
+{'data.data': '01:8b:d2:b9', 'data.len': '4'},
+{'data.data': '01:0b:d2:39', 'data.len': '4'},
+{'data.data': '01:8d:d2:bb', 'data.len': '4'},
+{'data.data': '01:0d:d2:3b', 'data.len': '4'}]";
 
 }

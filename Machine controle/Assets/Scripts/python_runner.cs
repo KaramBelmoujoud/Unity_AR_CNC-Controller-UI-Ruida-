@@ -368,8 +368,8 @@ public class python_runner : MonoBehaviour
             }
             Debug.Log(myData);
             myClient.Send(myData, myData.Length);
-            t = 0;
         }
+        t = 0;
         myClient.Close();
     }
 
@@ -426,8 +426,9 @@ public class python_runner : MonoBehaviour
             }
             Debug.Log(myData);
             myClient.Send(myData, myData.Length);
-            t = 0;
+            
         }
+        t = 0;
         myClient.Close();
     }
 
@@ -484,8 +485,8 @@ public class python_runner : MonoBehaviour
             }
             Debug.Log(myData);
             myClient.Send(myData, myData.Length);
-            t = 0;
         }
+        t = 0;
         myClient.Close();
     }
 
@@ -542,9 +543,33 @@ public class python_runner : MonoBehaviour
             }
             Debug.Log(myData);
             myClient.Send(myData, myData.Length);
-            t = 0;
+ 
+        }
+        t = 0;
+        myClient.Close();
+    }
+    public void Stop_ALL()
+    {
+        string jsontext = dataTransfer.Emergency_Stop;
+        var Dt = JsonConvert.DeserializeObject<Root[]>(jsontext);
+        IPEndPoint ep = new IPEndPoint(IPAddress.Parse(ip), port);
+        UdpClient myClient = new UdpClient(40200);
+        myClient.Connect(ep);
+        for (int j = 0; j < Dt.Length; j++)
+        {
+            var data = Dt[j];
+            PacketData = data.DataData;
+            PacketData = PacketData.Replace(":", "");
+            Debug.Log(PacketData);
+            byte[] myData = new byte[PacketData.Length / 2];
+
+            for (int i = 0, h = 0; h < PacketData.Length; i++, h += 2)
+            {
+                myData[i] = (byte)Int32.Parse(PacketData.Substring(h, 2), System.Globalization.NumberStyles.HexNumber);
+            }
+            Debug.Log(myData);
+            myClient.Send(myData, myData.Length);
         }
         myClient.Close();
     }
-
 }
