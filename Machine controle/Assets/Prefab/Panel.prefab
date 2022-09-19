@@ -7479,6 +7479,7 @@ MonoBehaviour:
   x: {fileID: 7147519541178736222}
   y: {fileID: 7147519541513924581}
   Data: {fileID: 6020590078516199333}
+  Stick: {fileID: 5551110519619596113}
   time: 0
   X_pos: 0
   Y_pos: 0
