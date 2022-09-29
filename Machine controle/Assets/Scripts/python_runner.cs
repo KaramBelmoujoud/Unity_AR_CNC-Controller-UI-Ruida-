@@ -43,11 +43,8 @@ public class python_runner : MonoBehaviour
                     Ver_right = 1;
                     Stop_ALL();
                     CON_RIGHT();
-                    //Debug.Log("Right");
-                    Ver_left = 0;
-                    Hor_down = 0;
-                    Hor_up = 0;
-                    stop = 0;
+                    Debug.Log("Right");
+                    Ver_left = Hor_down = Hor_up = stop = 0;
                 }
             }
             else if (X_Value < -40)
@@ -57,11 +54,8 @@ public class python_runner : MonoBehaviour
                     Ver_left = 1;
                     Stop_ALL();
                     CON_LEFT();
-                    //Debug.Log("Left");
-                    Ver_right = 0;
-                    Hor_down = 0;
-                    Hor_up = 0;
-                    stop = 0;
+                    Debug.Log("Left");
+                    Ver_right = Hor_down = Hor_up = stop = 0;
                 }
             }
             else if (Y_Value > 40)
@@ -71,11 +65,8 @@ public class python_runner : MonoBehaviour
                     Hor_up = 1;
                     Stop_ALL();
                     CON_UP();
-                    //Debug.Log("up");
-                    Ver_right = 0;
-                    Ver_left = 0;
-                    Hor_down = 0;
-                    stop = 0;
+                    Debug.Log("up");
+                    Ver_right = Ver_left = Hor_down = stop = 0;
                 }
             }
             else if (Y_Value < -40)
@@ -85,11 +76,8 @@ public class python_runner : MonoBehaviour
                     Hor_down = 1;
                     Stop_ALL();
                     CON_DOWN();
-                    //Debug.Log("Down");
-                    Ver_right = 0;
-                    Ver_left = 0;
-                    Hor_up = 0;
-                    stop = 0;
+                    Debug.Log("Down");
+                    Ver_right = Ver_left = Hor_up = stop = 0;
                 }
             }
             else if (X_Value == 0 && Y_Value == 0)
@@ -98,11 +86,8 @@ public class python_runner : MonoBehaviour
                 {
                     stop = 1;
                     Stop_ALL();
-                    //Debug.Log("Stop");
-                    Ver_right = 0;
-                    Ver_left = 0;
-                    Hor_down = 0;
-                    Hor_up = 0;
+                    Debug.Log("Stop");
+                    Ver_right = Ver_left = Hor_down = Hor_up = 0;
                 }
             }
         }
