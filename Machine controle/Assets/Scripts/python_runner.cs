@@ -15,29 +15,96 @@ public class python_runner : MonoBehaviour
     public InputField x, y;
     string PacketData = null;
     DataTransfer dataTransfer;
-    Position controlStick;
     [SerializeField]
     GameObject Data;
-    [SerializeField]
-    GameObject Stick;
+    public GameObject cube;
     private UdpClient myClient;
+    int X_Value, Y_Value;
+    public int Ver_left = 0, Ver_right = 0, Hor_up = 0, Hor_down = 0, stop = 0;
 
 
     void Awake()
     {
         dataTransfer = Data.GetComponent<DataTransfer>();
-        controlStick = Stick.GetComponent<Position>();
     }
 
+    [Obsolete]
     void Update()
     {
-        if (controlStick.transform.position.x > 10 || controlStick.transform.position.x < -10)
+        X_Value = (int)cube.transform.localPosition.x;
+        Y_Value = (int)cube.transform.localPosition.y;
+
+        if (ip != null)
         {
-            Debug.Log(controlStick.transform.position.x);
-        }
-        else if (controlStick.transform.position.y > 10 || controlStick.transform.position.y < -10)
-        {
-            Debug.Log(controlStick.transform.position.y);
+            if (X_Value > 40)
+            {
+                if (Ver_right != 1)
+                {
+                    Ver_right = 1;
+                    Stop_ALL();
+                    CON_RIGHT();
+                    //Debug.Log("Right");
+                    Ver_left = 0;
+                    Hor_down = 0;
+                    Hor_up = 0;
+                    stop = 0;
+                }
+            }
+            else if (X_Value < -40)
+            {
+                if (Ver_left != 1)
+                {
+                    Ver_left = 1;
+                    Stop_ALL();
+                    CON_LEFT();
+                    //Debug.Log("Left");
+                    Ver_right = 0;
+                    Hor_down = 0;
+                    Hor_up = 0;
+                    stop = 0;
+                }
+            }
+            else if (Y_Value > 40)
+            {
+                if (Hor_up != 1)
+                {
+                    Hor_up = 1;
+                    Stop_ALL();
+                    CON_UP();
+                    //Debug.Log("up");
+                    Ver_right = 0;
+                    Ver_left = 0;
+                    Hor_down = 0;
+                    stop = 0;
+                }
+            }
+            else if (Y_Value < -40)
+            {
+                if (Hor_down != 1)
+                {
+                    Hor_down = 1;
+                    Stop_ALL();
+                    CON_DOWN();
+                    //Debug.Log("Down");
+                    Ver_right = 0;
+                    Ver_left = 0;
+                    Hor_up = 0;
+                    stop = 0;
+                }
+            }
+            else if (X_Value == 0 && Y_Value == 0)
+            {
+                if (stop != 1)
+                {
+                    stop = 1;
+                    Stop_ALL();
+                    //Debug.Log("Stop");
+                    Ver_right = 0;
+                    Ver_left = 0;
+                    Hor_down = 0;
+                    Hor_up = 0;
+                }
+            }
         }
     }
 
