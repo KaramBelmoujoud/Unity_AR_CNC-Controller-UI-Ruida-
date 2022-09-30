@@ -9,9 +9,9 @@ using System.Text.RegularExpressions;
 
 public class python_runner : MonoBehaviour
 {
-    public InputField IpText, PortText, XText, YText;
-    string ip;
-    int port;
+    public InputField IpText, PortText, IpText2, PortText2, XText, YText;
+    string ip, ip2;
+    int port, port2;
     public InputField x, y;
     string PacketData = null;
     DataTransfer dataTransfer;
@@ -20,6 +20,7 @@ public class python_runner : MonoBehaviour
     public GameObject cube;
     private UdpClient myClient;
     int X_Value, Y_Value;
+    [HideInInspector]
     public int Ver_left = 0, Ver_right = 0, Hor_up = 0, Hor_down = 0, stop = 0;
 
 
@@ -104,11 +105,16 @@ public class python_runner : MonoBehaviour
 
     public void SaveIpPort()
     {
-        ip = IpText.text;
-        port = int.Parse(PortText.text);
+        ip = ip2 = IpText.text;
+        port = port2 = int.Parse(PortText.text);
+    }
+    public void UpdateIpPort()
+    {
+        ip =  IpText2.text;
+        port = int.Parse(PortText2.text);
     }
 
-    
+
     [Obsolete]
     public void Connect()
     {
