@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 
 public class python_runner : MonoBehaviour
 {
-    public InputField IpText, PortText, IpText2, PortText2, XText, YText;
+    public InputField IpText, PortText, IpText2, PortText2, XText, YText, XText2 = null, YText2 = null;
     string ip, ip2;
     int port, port2;
     public InputField x, y;
@@ -143,6 +143,14 @@ public class python_runner : MonoBehaviour
     {
         float Xex = float.Parse(x.text), Yex = float.Parse(y.text);
         float MX = float.Parse(XText.text), MY = float.Parse(YText.text);
+        if(XText2.text != null)
+        {
+            MX = float.Parse(XText2.text);
+        }
+        else if(YText2.text != null)
+        {
+            MY = float.Parse(YText2.text);
+        }
         Connect();
         if (Xex > MX)
         {
@@ -273,7 +281,6 @@ public class python_runner : MonoBehaviour
         myClient.Close();
     }
 
-    [Obsolete]
     public void LEFT()
     {
         string jsontext = dataTransfer.Left;
@@ -298,10 +305,9 @@ public class python_runner : MonoBehaviour
         myClient.Close();
     }
 
-    [Obsolete]
-    public void RIGHT()
+    public void TRIGHT()
     {
-        string jsontext = dataTransfer.Right;
+        string jsontext = dataTransfer.tRight;
         var Dt = JsonConvert.DeserializeObject<Root[]>(jsontext);
         Connect();
         // foreach (var data in Dt)
@@ -323,7 +329,6 @@ public class python_runner : MonoBehaviour
         myClient.Close();
     }
 
-    [Obsolete]
     public void UP()
     {
         string jsontext = dataTransfer.Up;
@@ -348,7 +353,6 @@ public class python_runner : MonoBehaviour
         myClient.Close();
     }
 
-    [Obsolete]
     public void DOWN()
     {
         string jsontext = dataTransfer.Down;
@@ -373,7 +377,6 @@ public class python_runner : MonoBehaviour
         myClient.Close();
     }
 
-    [Obsolete]
     public void HOME()
     {
         string jsontext = dataTransfer.Home;
